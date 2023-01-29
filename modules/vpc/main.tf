@@ -10,9 +10,9 @@ resource "aws_vpc" "vpc" {
   enable_dns_support   = var.enable_dns_support
 
   tags = {
-    Name    = join("-", ["ice", var.project, terraform.workspace, "vpc"])
+    Name    = join("-", ["T007B", var.project, "vpc"])
     Owner   = var.owner
-    Project = join("-", ["ice", var.project, terraform.workspace])
+    Project = join("-", ["T007B", var.project, "terraform"])
   }
 
   lifecycle {
