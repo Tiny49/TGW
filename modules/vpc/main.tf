@@ -93,12 +93,12 @@ resource "aws_nat_gateway" "nat_gw" {
   }
 }
 
-#create a route in the private route table for the NAT gateway to get outbound
-resource "aws_route" "nat_rt" {
-  route_table_id         = aws_route_table.private.id
-  destination_cidr_block = "0.0.0.0/0"
-  transit_gateway_id     = data.terraform_remote_state.tgw_state.outputs.tgw_id
-}
+# #create a route in the private route table for the NAT gateway to get outbound
+# resource "aws_route" "nat_rt" {
+#   route_table_id         = aws_route_table.private.id
+#   destination_cidr_block = "0.0.0.0/0"
+#   transit_gateway_id     = data.terraform_remote_state.tgw_state.outputs.tgw_id
+# }
 
 # module "vpc" {
 
